@@ -7,7 +7,7 @@ The objective of this analysis is to evaluate the aerodynamic performance of NAS
 
 ## Methodology
 ### Domain and Mesh
-To optimize computational resources, we utilized a single blade fluid domain mesh, leveraging the symmetrical nature of the rotor. This approach significantly reduced the computational time and resources required for the analysis. The periodic boundary conditions were applied to account for the symmetry in the circumferential direction.
+To optimize computational resources, we utilized a single blade fluid domain mesh, leveraging the symmetrical nature of the rotor. This approach significantly reduced the computational time and resources required for the analysis. The periodic boundary conditions were applied to account for the symmetry in the circumferential direction. The mesh was generated in ANSYS TurboGrid, ensuring high-quality elements around critical regions, such as the blade leading and trailing edges, hub, and tip. The final mesh was fine-tuned to capture the complex flow features present in transonic conditions.
 
 The mesh consisted of structured grids with a refined boundary layer to accurately capture the flow characteristics near the blade surface. The total number of nodes and elements was carefully chosen to balance accuracy and computational efficiency.
 
