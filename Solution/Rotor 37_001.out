@@ -1,0 +1,608 @@
+ This run of the CFX 2024 R1 Solver started at 13:56:50 on 03 Aug 2024
+ by user yashk on YASH (intel_xeon64.sse2_winnt) using the command:
+ 
+  "C:\Program Files\ANSYS Inc\ANSYS Student\v241\CFX\bin\perllib\cfx5solve.pl"
+    -stdout-comms -batch -ccl -
+ 
+ 2024 R1
+ 
+  Point Releases and Patches installed:
+  Discovery 2024 R1
+  Fluids 2024 R1
+  Ansys Dynamic Reporting 2024 R1
+  SpaceClaim 2024 R1
+  CFX (includes CFD-Post) 2024 R1
+  Chemkin 2024 R1
+  EnSight 2024 R1
+  FENSAP-ICE 2024 R1
+  Fluent (includes CFD-Post) 2024 R1
+  Polyflow (includes CFD-Post) 2024 R1
+  Forte (includes EnSight) 2024 R1
+  TurboGrid 2024 R1
+  ACIS Geometry Interface 2024 R1
+  AutoCAD Geometry Interface 2024 R1
+  Catia, Version 4 Geometry Interface 2024 R1
+  Catia, Version 5 Geometry Interface 2024 R1
+  Catia, Version 6 Geometry Interface 2024 R1
+  Creo Elements/Direct Modeling Geometry Interface 2024 R1
+  Creo Parametric Geometry Interface 2024 R1
+  Inventor Geometry Interface 2024 R1
+  JTOpen Geometry Interface 2024 R1
+  NX Geometry Interface 2024 R1
+  Parasolid Geometry Interface  2024 R1
+  Solid Edge Geometry Interface 2024 R1
+  SOLIDWORKS Geometry Interface 2024 R1
+  Speos 2024 R1
+  Aqwa 2024 R1
+  Autodyn 2024 R1
+  Material Calibration App 2024 R1
+  Customization Files for User Programmable Features 2024 R1
+  Mechanical Products 2024 R1
+  Motion 2024 R1
+  Academic Student 2024 R1
+ 
+ Setting up CFX Solver run ...
+ 
+ 
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                    CFX Command Language for Run                    |
+ |                                                                    |
+ +--------------------------------------------------------------------+
+ 
+ LIBRARY:
+   CEL:
+     EXPRESSIONS:
+       EFF = ((PR ^0.2857) - 1)/(TR - 1)
+       Mass flow out = massFlow()@R1 Outlet*-36
+       PR = massFlowAve(Total Pressure in Stn Frame )@R1 \
+         Outlet/massFlowAve(Total Pressure in Stn Frame )@R1 Inlet
+       TR = massFlowAve(Total Temperature in Stn Frame )@R1 \
+         Outlet/massFlowAve(Total Temperature in Stn Frame )@R1 Inlet
+       mass flow = massFlow()@R1 Inlet*36
+     END
+   END
+   MATERIAL: Air Ideal Gas
+     Material Description = Air Ideal Gas (constant Cp)
+     Material Group = Air Data, Calorically Perfect Ideal Gases
+     Option = Pure Substance
+     Thermodynamic State = Gas
+     PROPERTIES:
+       Option = General Material
+       EQUATION OF STATE:
+         Molar Mass = 28.96 [kg kmol^-1]
+         Option = Ideal Gas
+       END
+       SPECIFIC HEAT CAPACITY:
+         Option = Value
+         Specific Heat Capacity = 1.0044E+03 [J kg^-1 K^-1]
+         Specific Heat Type = Constant Pressure
+       END
+       REFERENCE STATE:
+         Option = Specified Point
+         Reference Pressure = 1 [atm]
+         Reference Specific Enthalpy = 0. [J/kg]
+         Reference Specific Entropy = 0. [J/kg/K]
+         Reference Temperature = 25 [C]
+       END
+       DYNAMIC VISCOSITY:
+         Dynamic Viscosity = 1.831E-05 [kg m^-1 s^-1]
+         Option = Value
+       END
+       THERMAL CONDUCTIVITY:
+         Option = Value
+         Thermal Conductivity = 2.61E-2 [W m^-1 K^-1]
+       END
+       ABSORPTION COEFFICIENT:
+         Absorption Coefficient = 0.01 [m^-1]
+         Option = Value
+       END
+       SCATTERING COEFFICIENT:
+         Option = Value
+         Scattering Coefficient = 0.0 [m^-1]
+       END
+       REFRACTIVE INDEX:
+         Option = Value
+         Refractive Index = 1.0 [m m^-1]
+       END
+     END
+   END
+ END
+ FLOW: Flow Analysis 1
+   SOLUTION UNITS:
+     Angle Units = [rad]
+     Length Units = [m]
+     Mass Units = [kg]
+     Solid Angle Units = [sr]
+     Temperature Units = [K]
+     Time Units = [s]
+   END
+   ANALYSIS TYPE:
+     Option = Steady State
+     EXTERNAL SOLVER COUPLING:
+       Option = None
+     END
+   END
+   DOMAIN: R1
+     Coord Frame = Coord 0
+     Domain Type = Fluid
+     Location = Passage
+     BOUNDARY: R1 Blade
+       Boundary Type = WALL
+       Frame Type = Rotating
+       Location = BLADE
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Adiabatic
+         END
+         MASS AND MOMENTUM:
+           Option = No Slip Wall
+         END
+         WALL ROUGHNESS:
+           Option = Smooth Wall
+         END
+       END
+     END
+     BOUNDARY: R1 Hub
+       Boundary Type = WALL
+       Frame Type = Rotating
+       Location = HUB
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Adiabatic
+         END
+         MASS AND MOMENTUM:
+           Option = No Slip Wall
+         END
+         WALL ROUGHNESS:
+           Option = Smooth Wall
+         END
+       END
+     END
+     BOUNDARY: R1 Inlet
+       Boundary Type = INLET
+       Frame Type = Stationary
+       Location = INFLOW
+       BOUNDARY CONDITIONS:
+         FLOW DIRECTION:
+           Option = Normal to Boundary Condition
+         END
+         FLOW REGIME:
+           Option = Subsonic
+         END
+         HEAT TRANSFER:
+           Option = Stationary Frame Total Temperature
+           Stationary Frame Total Temperature = 288.15 [K]
+         END
+         MASS AND MOMENTUM:
+           Option = Stationary Frame Total Pressure
+           Relative Pressure = 1 [atm]
+         END
+         TURBULENCE:
+           Option = Medium Intensity and Eddy Viscosity Ratio
+         END
+       END
+     END
+     BOUNDARY: R1 Outlet
+       Boundary Type = OUTLET
+       Frame Type = Stationary
+       Location = OUTFLOW
+       BOUNDARY CONDITIONS:
+         FLOW REGIME:
+           Option = Subsonic
+         END
+         MASS AND MOMENTUM:
+           Option = Average Static Pressure
+           Pressure Profile Blend = 0.05
+           Relative Pressure = 1 [atm]
+         END
+         PRESSURE AVERAGING:
+           Option = Average Over Whole Outlet
+         END
+       END
+     END
+     BOUNDARY: R1 Shroud
+       Boundary Type = WALL
+       Frame Type = Rotating
+       Location = SHROUD
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Adiabatic
+         END
+         MASS AND MOMENTUM:
+           Option = No Slip Wall
+           WALL VELOCITY:
+             Option = Counter Rotating Wall
+           END
+         END
+         WALL ROUGHNESS:
+           Option = Smooth Wall
+         END
+       END
+     END
+     BOUNDARY: R1 to R1 Internal Side 1
+       Boundary Type = INTERFACE
+       Location = SHROUD TIP GGI SIDE 1
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Conservative Interface Flux
+         END
+         MASS AND MOMENTUM:
+           Option = Conservative Interface Flux
+         END
+         TURBULENCE:
+           Option = Conservative Interface Flux
+         END
+       END
+     END
+     BOUNDARY: R1 to R1 Internal Side 2
+       Boundary Type = INTERFACE
+       Location = SHROUD TIP GGI SIDE 2
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Conservative Interface Flux
+         END
+         MASS AND MOMENTUM:
+           Option = Conservative Interface Flux
+         END
+         TURBULENCE:
+           Option = Conservative Interface Flux
+         END
+       END
+     END
+     BOUNDARY: R1 to R1 Periodic 1 Side 1
+       Boundary Type = INTERFACE
+       Location = PER1
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Conservative Interface Flux
+         END
+         MASS AND MOMENTUM:
+           Option = Conservative Interface Flux
+         END
+         TURBULENCE:
+           Option = Conservative Interface Flux
+         END
+       END
+     END
+     BOUNDARY: R1 to R1 Periodic 1 Side 2
+       Boundary Type = INTERFACE
+       Location = PER2
+       BOUNDARY CONDITIONS:
+         HEAT TRANSFER:
+           Option = Conservative Interface Flux
+         END
+         MASS AND MOMENTUM:
+           Option = Conservative Interface Flux
+         END
+         TURBULENCE:
+           Option = Conservative Interface Flux
+         END
+       END
+     END
+     DOMAIN MODELS:
+       BUOYANCY MODEL:
+         Option = Non Buoyant
+       END
+       DOMAIN MOTION:
+         Alternate Rotation Model = true
+         Angular Velocity = 17189 [rev min^-1]
+         Option = Rotating
+         AXIS DEFINITION:
+           Option = Coordinate Axis
+           Rotation Axis = Coord 0.1
+         END
+       END
+       MESH DEFORMATION:
+         Option = None
+       END
+       REFERENCE PRESSURE:
+         Reference Pressure = 0 [atm]
+       END
+     END
+     FLUID DEFINITION: Air Ideal Gas
+       Material = Air Ideal Gas
+       Option = Material Library
+       MORPHOLOGY:
+         Option = Continuous Fluid
+       END
+     END
+     FLUID MODELS:
+       COMBUSTION MODEL:
+         Option = None
+       END
+       HEAT TRANSFER MODEL:
+         Include Viscous Work Term = True
+         Option = Total Energy
+       END
+       THERMAL RADIATION MODEL:
+         Option = None
+       END
+       TURBULENCE MODEL:
+         Option = k epsilon
+       END
+       TURBULENT WALL FUNCTIONS:
+         High Speed Model = Off
+         Option = Scalable
+       END
+     END
+   END
+   DOMAIN INTERFACE: R1 to R1 Internal
+     Boundary List1 = R1 to R1 Internal Side 1
+     Boundary List2 = R1 to R1 Internal Side 2
+     Interface Type = Fluid Fluid
+     INTERFACE MODELS:
+       Option = General Connection
+       FRAME CHANGE:
+         Option = None
+       END
+       MASS AND MOMENTUM:
+         Option = Conservative Interface Flux
+         MOMENTUM INTERFACE MODEL:
+           Option = None
+         END
+       END
+       PITCH CHANGE:
+         Option = None
+       END
+     END
+     MESH CONNECTION:
+       Option = GGI
+     END
+   END
+   DOMAIN INTERFACE: R1 to R1 Periodic 1
+     Boundary List1 = R1 to R1 Periodic 1 Side 1
+     Boundary List2 = R1 to R1 Periodic 1 Side 2
+     Interface Type = Fluid Fluid
+     INTERFACE MODELS:
+       Option = Rotational Periodicity
+       AXIS DEFINITION:
+         Option = Coordinate Axis
+         Rotation Axis = Coord 0.1
+       END
+     END
+     MESH CONNECTION:
+       Option = Automatic
+     END
+   END
+   OUTPUT CONTROL:
+     MONITOR OBJECTS:
+       EFFICIENCY OUTPUT:
+         Efficiency Calculation Method = Total to Total
+         Efficiency Type = Both Compression and Expansion
+         Inflow Boundary = R1 Inlet
+         Option = Output To Solver Monitor
+         Outflow Boundary = R1 Outlet
+       END
+       MONITOR BALANCES:
+         Option = Full
+       END
+       MONITOR FORCES:
+         Option = Full
+       END
+       MONITOR PARTICLES:
+         Option = Full
+       END
+       MONITOR POINT: Efficiency
+         Coord Frame = Coord 0
+         Expression Value = EFF
+         Option = Expression
+       END
+       MONITOR POINT: Mass flow in
+         Coord Frame = Coord 0
+         Expression Value = mass flow
+         Option = Expression
+       END
+       MONITOR POINT: Mass flow o
+         Coord Frame = Coord 0
+         Expression Value = Mass flow out
+         Option = Expression
+       END
+       MONITOR POINT: Pressure Ratio
+         Coord Frame = Coord 0
+         Expression Value = PR
+         Option = Expression
+       END
+       MONITOR POINT: Temp ratio
+         Coord Frame = Coord 0
+         Expression Value = TR
+         Option = Expression
+       END
+       MONITOR RESIDUALS:
+         Option = Full
+       END
+       MONITOR TOTALS:
+         Option = Full
+       END
+     END
+     RESULTS:
+       File Compression Level = Default
+       Option = Standard
+     END
+   END
+   SOLVER CONTROL:
+     Turbulence Numerics = High Resolution
+     ADVECTION SCHEME:
+       Option = High Resolution
+     END
+     CONVERGENCE CONTROL:
+       Length Scale Option = Conservative
+       Maximum Number of Iterations = 500
+       Minimum Number of Iterations = 1
+       Timescale Control = Auto Timescale
+       Timescale Factor = 1.0
+     END
+     CONVERGENCE CRITERIA:
+       Residual Target = 0.000001
+       Residual Type = RMS
+     END
+     DYNAMIC MODEL CONTROL:
+       Global Dynamic Model Control = On
+     END
+     INTERRUPT CONTROL:
+       Option = Any Interrupt
+       CONVERGENCE CONDITIONS:
+         Option = Default Conditions
+       END
+     END
+   END
+ END
+ COMMAND FILE:
+   Version = 24.1
+   Results Version = 24.1
+ END
+ SIMULATION CONTROL:
+   EXECUTION CONTROL:
+     EXECUTABLE SELECTION:
+       Double Precision = No
+       Large Problem = No
+     END
+     INTERPOLATOR STEP CONTROL:
+       Runtime Priority = Standard
+       MEMORY CONTROL:
+         Memory Allocation Factor = 1.0
+         Option = Model Based
+       END
+     END
+     PARALLEL HOST LIBRARY:
+       HOST DEFINITION: yash
+         Host Architecture String = winnt-amd64
+         Installation Root = C:\Program Files\ANSYS Inc\ANSYS Student\v%v\CFX
+       END
+     END
+     PARTITIONER STEP CONTROL:
+       Multidomain Option = Automatic
+       Runtime Priority = Standard
+       MEMORY CONTROL:
+         Memory Allocation Factor = 1.0
+         Option = Model Based
+       END
+       PARTITION SMOOTHING:
+         Maximum Partition Smoothing Sweeps = 100
+         Option = Smooth
+       END
+       PARTITIONING TYPE:
+         MeTiS Type = k-way
+         Option = MeTiS
+         Partition Size Rule = Automatic
+         Partition Weight Factors = 0.05000, 0.05000, 0.05000, 0.05000, \
+           0.05000, 0.05000, 0.05000, 0.05000, 0.05000, 0.05000, 0.05000, \
+           0.05000, 0.05000, 0.05000, 0.05000, 0.05000, 0.05000, 0.05000, \
+           0.05000, 0.05000
+       END
+     END
+     RUN DEFINITION:
+       Run Mode = Full
+       Solver Input File = D:/ANSYS/ROTOR 37/CASE SETUP/Rotor 37.def
+       Solver Results File = D:\ANSYS\ROTOR 37\SOLUTION\Rotor 37_001.res
+     END
+     SOLVER STEP CONTROL:
+       Runtime Priority = Standard
+       MEMORY CONTROL:
+         Memory Allocation Factor = 1.0
+         Option = Model Based
+       END
+       PARALLEL ENVIRONMENT:
+         Number of Processes = 20
+         Start Method = Intel MPI Local Parallel
+         Parallel Host List = yash*20
+       END
+     END
+   END
+ END
+ 
+ 
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                            Partitioning                            |
+ |                                                                    |
+ +--------------------------------------------------------------------+
+ 
+
+
+
+ +--------------------------------------------------------------------+
+ |                                                                    |
+ |                     ANSYS(R) CFX(R) Partitioner                    |
+ |                                                                    |
+ | 2024 R1                                                            |
+ | Build 24.1 2023-11-06T16:24:29.753953                              |
+ | Mon Nov  6 17:00:38 GMTST 2023                                     |
+ |                                                                    |
+ |                        Executable Attributes                       |
+ |                                                                    |
+ |           single-64bit-int32-archfort-optimised-std-lcomp          |
+ |                                                                    |
+ | (C) 1996-2024 ANSYS, Inc.                                          |
+ |                                                                    |
+ | All rights reserved. Unauthorized use, distribution or duplication |
+ | is prohibited. This product is subject to U.S. laws governing      |
+ | export and re-export. For full Legal Notice, see documentation.    |
+ +--------------------------------------------------------------------+
+
+
+
+
+ +--------------------------------------------------------------------+
+ |                  Job Information at Start of Run                   |
+ +--------------------------------------------------------------------+
+
+ Run mode:       partitioning run
+
+ Host computer:  YASH (PID:22704)
+
+ Job started:    Sat Aug  3 13:56:55 2024
+
+ +--------------------------------------------------------------------+
+ |                        License Information                         |
+ +--------------------------------------------------------------------+
+ 
+ License Cap:    ANSYS CFD Solver
+ License ID:     Yash-yashk-3900-000004
+ 
+ License Cap:    ANSYS HPC Parallel
+
+ANSYS LICENSE MANAGER ERROR
+
+Insufficient FlexNet Publisher (FNP) license count of HPC Parallel are available for use, only 4 of the requested 20 tasks were available.
+
+
+ License ID:     License checkout failed (HPC PARALLEL).
+
+ANSYS LICENSE MANAGER ERROR
+
+Insufficient FlexNet Publisher (FNP) license count of HPC Parallel are available for use, only 4 of the requested 20 tasks were available.
+
+
+ 
+ +--------------------------------------------------------------------+
+ | ERROR #001100247 has occurred in subroutine .                      |
+ | Message:                                                           |
+ |                                                                    |
+ | The solver is unable to continue because of licensing problems.    |
+ |                                                                    |
+ | A license for the following capability level could not be checked  |
+ | out:                                                               |
+ |                                                                    |
+ | ANSYS HPC Parallel                                                 |
+ |                                                                    |
+ | Please carefully examine the error message output above and check  |
+ | that:                                                              |
+ |                                                                    |
+ | 1) The license server is specified correctly and is running.       |
+ |                                                                    |
+ | 2) An appropriate license is available for checking out.           |
+ |                                                                    |
+ | These problems can be checked using the ANSYS Client ANSLIC_ADMIN  |
+ | utility.  For further troubleshooting information please consult   |
+ | ANSYS, Inc. Licensing Guide.                                       |
+ +--------------------------------------------------------------------+
+
+ +--------------------------------------------------------------------+
+ |                An error has occurred in cfx5solve:                 |
+ |                                                                    |
+ | The ANSYS CFX partitioner exited with return code 1.               |
+ +--------------------------------------------------------------------+
+
+
+This run of the ANSYS CFX Solver has finished.

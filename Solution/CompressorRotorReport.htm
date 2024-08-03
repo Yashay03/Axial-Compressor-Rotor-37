@@ -1,0 +1,1365 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Axial Compressor Rotor Report</title>
+<style>
+BODY, P, TABLE, DIV.CAPTION {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 95%;
+}
+H1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #3b577d;
+}
+H2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #3b577d;
+}
+H3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #3b577d;
+}
+H4 {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #3b577d;
+}
+H5 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #3b577d;
+}
+H6 {
+  font-size: 1.05em;
+  font-weight: normal;
+  color: #3b577d;
+}
+P {
+  font-weight: normal;
+}
+P.Subject {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #000099;
+  text-align: center;
+}
+P.Heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+P.Title {
+  font-size: 1.0em;
+  text-align: center;
+  margin-top: 0pt;
+}
+P.Bold {
+  font-weight: bold;
+}
+TABLE{
+  border-collapse: collapse;
+  border: solid 1px #A5BAD5;
+}
+TD {
+  border: solid 1px #A5BAD5;
+  padding: 3px 5px 3px 5px;
+  font-weight: normal;
+  vertical-align:top
+}
+DIV.CAPTION {
+  font-weight: normal;
+  text-align: left;
+}
+TABLE.FigureTable { 
+  border-collapse: collapse;
+  border: 0px;
+  margin: 0px 0px 0px 0px;
+  page-break-inside: avoid;
+}
+TD.FigureTitle {
+  border: 0px;
+  padding: 3px 5px 3px 5px;
+  font-weight: normal;
+  text-align: left;
+}
+TD.FigurePicture {
+  border: 0px;
+  padding: 0px 0px 0px 0px;
+  font-weight: normal;
+  text-align: left;
+}
+TD.Figure3D {
+  border: 1px solid black;
+  padding: 0px 0px 0px 0px;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+}
+TD.FigureClose3D {
+  border: 0px;
+  padding: 0px 0px 0px 0px;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+
+TD.TDStyle1 {
+  font-size: 1.0em;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #d1dcea
+}
+
+TD.TDStyle2 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+  background-color: #ffffff
+}
+
+TD.TDStyle3 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #e8eef5
+}
+
+TD.TDStyle4 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: right;
+  color: #000000;
+  background-color: #ffffff
+}
+
+TD.TDStyle5 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: #000000;
+  background-color: #e8eef5
+}
+
+TD.TDStyle6 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #d1dcea
+}
+
+TD.TDStyle7 {
+  font-size: 1.0em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff
+}
+
+TD.TDStyle8 {
+  font-size: 1.0em;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #e8eef5
+}
+
+TD.TDStyle9 {
+  font-size: 1.15em;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff
+}
+
+
+</style>
+
+</head>
+<body>
+<p class='Title'><img src='CompressorRotorReport/AnsysReportLogo.png' alt='ANSYS Logo'></p>
+<p class='Heading'>Title</p>
+<p class='Title'>Axial Compressor Rotor Report</p>
+<p class='Heading'>Date</p>
+<p class='Title'> 2024/08/03 15:03:49</p>
+<hr>
+<h1>Contents</h1>
+<p><a href="#SECTION1.">1.&nbsp;File Report</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE1">Table 1</a>&nbsp;&nbsp;File Information for Rotor 37_003<br>
+<a href="#SECTION2.">2.&nbsp;Mesh Report</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE2">Table 2</a>&nbsp;&nbsp;Mesh Information for Rotor 37_003<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE3">Table 3</a>&nbsp;&nbsp;Mesh Statistics for Rotor 37_003<br>
+<a href="#SECTION3.">3.&nbsp;Physics Report</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE4">Table 4</a>&nbsp;&nbsp;Domain Physics for Rotor 37_003<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE5">Table 5</a>&nbsp;&nbsp;Boundary Physics for Rotor 37_003<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART1">Chart 1</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART2">Chart 2</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART3">Chart 3</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE1">Figure 1</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE2">Figure 2</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE6">Table 6</a><br>
+<a href="#SECTION4.">4.&nbsp;Tabulated Results</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE7">Table 7</a>&nbsp;&nbsp;Compressor Performance Results<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#TABLE8">Table 8</a>&nbsp;&nbsp;Summary Data<br>
+<a href="#SECTION5.">5.&nbsp;Blade Loading Charts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART4">Chart 4</a>&nbsp;&nbsp;Blade Loading at 20% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART5">Chart 5</a>&nbsp;&nbsp;Blade Loading at 50% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART6">Chart 6</a>&nbsp;&nbsp;Blade Loading at 80% Span<br>
+<a href="#SECTION6.">6.&nbsp;Streamwise Charts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART7">Chart 7</a>&nbsp;&nbsp;Streamwise Plot of Pt and P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART8">Chart 8</a>&nbsp;&nbsp;Streamwise Plot of Tt and T<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART9">Chart 9</a>&nbsp;&nbsp;Streamwise Plot of Absolute and Relative Mach Number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART10">Chart 10</a>&nbsp;&nbsp;Streamwise Plot of Static Entropy<br>
+<a href="#SECTION7.">7.&nbsp;Spanwise Charts</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART11">Chart 11</a>&nbsp;&nbsp;Spanwise Plot of Alpha and Beta at LE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART12">Chart 12</a>&nbsp;&nbsp;Spanwise Plot of Relative Mach Number at LE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART13">Chart 13</a>&nbsp;&nbsp;Spanwise Plot of Alpha and Beta at TE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART14">Chart 14</a>&nbsp;&nbsp;Spanwise Plot of Relative Mach Number at TE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART15">Chart 15</a>&nbsp;&nbsp;Spanwise Plot of Absolute Mach Number at TE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#CHART16">Chart 16</a>&nbsp;&nbsp;Spanwise Plot of Meridional Velocity at TE<br>
+<a href="#SECTION8.">8.&nbsp;Blade Geometry Plots</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE3">Figure 3</a>&nbsp;&nbsp;Isometric 3D View of the Blade, Hub and Shroud<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE4">Figure 4</a>&nbsp;&nbsp;Meridional View of the Blade, Hub and Shroud<br>
+<a href="#SECTION9.">9.&nbsp;Blade Mesh Plot</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE5">Figure 5</a>&nbsp;&nbsp;Mesh Elements at 50% Span<br>
+<a href="#SECTION10.">10.&nbsp;Blade to Blade Plots</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE6">Figure 6</a>&nbsp;&nbsp;Contour of M rel at 20% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE7">Figure 7</a>&nbsp;&nbsp;Contour of M rel at 50% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE8">Figure 8</a>&nbsp;&nbsp;Contour of M rel at 80% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE9">Figure 9</a>&nbsp;&nbsp;Velocity Vectors at 20% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE10">Figure 10</a>&nbsp;&nbsp;Velocity Vectors at 50% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE11">Figure 11</a>&nbsp;&nbsp;Velocity Vectors at 80% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE12">Figure 12</a>&nbsp;&nbsp;Contour of s at 20% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE13">Figure 13</a>&nbsp;&nbsp;Contour of s at 50% Span<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE14">Figure 14</a>&nbsp;&nbsp;Contour of s at 80% Span<br>
+<a href="#SECTION11.">11.&nbsp;Meridional Plots</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE15">Figure 15</a>&nbsp;&nbsp;Contour of Mass Averaged P on Meridional Surface<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE16">Figure 16</a>&nbsp;&nbsp;Contour of Mass Averaged M rel on Meridional Surface<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE17">Figure 17</a>&nbsp;&nbsp;Vector of Area Averaged Cm on Meridional Surface<br>
+<a href="#SECTION12.">12.&nbsp;Circumferential Plots</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE18">Figure 18</a>&nbsp;&nbsp;Contour of P at Blade LE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE19">Figure 19</a>&nbsp;&nbsp;Contour of M rel at Blade LE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE20">Figure 20</a>&nbsp;&nbsp;Contour of s at Blade LE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE21">Figure 21</a>&nbsp;&nbsp;Contour of P at Blade TE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE22">Figure 22</a>&nbsp;&nbsp;Contour of M rel at Blade TE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE23">Figure 23</a>&nbsp;&nbsp;Contour of s at Blade TE<br>
+<a href="#SECTION13.">13.&nbsp;Streamline Plot</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#FIGURE24">Figure 24</a>&nbsp;&nbsp;Velocity Streamlines at Blade TE<br>
+</p>
+<hr>
+
+<h1 style='page-break-before:always'><a id=SECTION1.></a>1.&nbsp;File Report</h1>
+
+<a id=TABLE1></a><DIV CLASS=CAPTION><b>Table 1.</b>&nbsp;&nbsp;File Information for Rotor 37_003</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle1>Case</TD>
+    <TD CLASS=TDStyle2>Rotor 37_003</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1>File Path</TD>
+    <TD CLASS=TDStyle2>D:/ANSYS/ROTOR 37/SOLUTION/Rotor 37_003.res</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1>File Date</TD>
+    <TD CLASS=TDStyle2>03 August 2024</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1>File Time</TD>
+    <TD CLASS=TDStyle2>02:14:05 PM</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1>File Type</TD>
+    <TD CLASS=TDStyle2>CFX5</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1>File Version</TD>
+    <TD CLASS=TDStyle2>24.1</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<h1 style='page-break-before:always'><a id=SECTION2.></a>2.&nbsp;Mesh Report</h1>
+
+<a id=TABLE2></a><DIV CLASS=CAPTION><b>Table 2.</b>&nbsp;&nbsp;Mesh Information for Rotor 37_003</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle1>Domain</TD>
+    <TD CLASS=TDStyle1>Nodes</TD>
+    <TD CLASS=TDStyle1>Elements</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle3>R1</TD>
+    <TD CLASS=TDStyle4>158309</TD>
+    <TD CLASS=TDStyle4>147882</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<a id=TABLE3></a><DIV CLASS=CAPTION><b>Table 3.</b>&nbsp;&nbsp;Mesh Statistics for Rotor 37_003</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle1>Domain</TD>
+    <TD CLASS=TDStyle1>Maximum Edge Length Ratio</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle3>R1</TD>
+    <TD CLASS=TDStyle4>235.171</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<h1 style='page-break-before:always'><a id=SECTION3.></a>3.&nbsp;Physics Report</h1>
+
+<a id=TABLE4></a><DIV CLASS=CAPTION><b>Table 4.</b>&nbsp;&nbsp;Domain Physics for Rotor 37_003</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Domain - R1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>Fluid</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>Passage</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Materials</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5 colspan="2" >Air Ideal Gas</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fluid Definition</TD>
+    <TD CLASS=TDStyle7>Material Library</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Morphology</TD>
+    <TD CLASS=TDStyle7>Continuous Fluid</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Buoyancy Model</TD>
+    <TD CLASS=TDStyle7>Non Buoyant</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Domain Motion</TD>
+    <TD CLASS=TDStyle7>Rotating</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternate Rotation Model</TD>
+    <TD CLASS=TDStyle7>true</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Angular Velocity</TD>
+    <TD CLASS=TDStyle7>  1.7189e+4 [rev min^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Axis Definition</TD>
+    <TD CLASS=TDStyle7>Coordinate Axis</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rotation Axis</TD>
+    <TD CLASS=TDStyle7>Coord 0.1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Reference Pressure</TD>
+    <TD CLASS=TDStyle7>  0.0000e+0 [atm]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer Model</TD>
+    <TD CLASS=TDStyle7>Total Energy</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Include Viscous Work Term</TD>
+    <TD CLASS=TDStyle7>True</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence Model</TD>
+    <TD CLASS=TDStyle7>k epsilon</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulent Wall Functions</TD>
+    <TD CLASS=TDStyle7>Scalable</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High Speed Model</TD>
+    <TD CLASS=TDStyle7>Off</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Domain Interface - R1 to R1 Internal</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Boundary List1</TD>
+    <TD CLASS=TDStyle7>R1 to R1 Internal Side 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Boundary List2</TD>
+    <TD CLASS=TDStyle7>R1 to R1 Internal Side 2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Interface Type</TD>
+    <TD CLASS=TDStyle7>Fluid Fluid</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Interface Models</TD>
+    <TD CLASS=TDStyle7>General Connection</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mesh Connection</TD>
+    <TD CLASS=TDStyle7>GGI</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Domain Interface - R1 to R1 Periodic 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Boundary List1</TD>
+    <TD CLASS=TDStyle7>R1 to R1 Periodic 1 Side 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Boundary List2</TD>
+    <TD CLASS=TDStyle7>R1 to R1 Periodic 1 Side 2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Interface Type</TD>
+    <TD CLASS=TDStyle7>Fluid Fluid</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Interface Models</TD>
+    <TD CLASS=TDStyle7>Rotational Periodicity</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Axis Definition</TD>
+    <TD CLASS=TDStyle7>Coordinate Axis</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rotation Axis</TD>
+    <TD CLASS=TDStyle7>Coord 0.1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mesh Connection</TD>
+    <TD CLASS=TDStyle7>Automatic</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<a id=TABLE5></a><DIV CLASS=CAPTION><b>Table 5.</b>&nbsp;&nbsp;Boundary Physics for Rotor 37_003</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle8>Domain</TD>
+    <TD CLASS=TDStyle8 colspan="2" >Boundaries</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2 rowspan="70" >R1</TD>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 Inlet</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>INLET</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>INFLOW</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Flow Direction</TD>
+    <TD CLASS=TDStyle7>Normal to Boundary Condition</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Flow Regime</TD>
+    <TD CLASS=TDStyle7>Subsonic</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Stationary Frame Total Temperature</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stationary Frame Total Temperature</TD>
+    <TD CLASS=TDStyle7>  2.8815e+2 [K]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Stationary Frame Total Pressure</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative Pressure</TD>
+    <TD CLASS=TDStyle7>  1.0000e+0 [atm]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence</TD>
+    <TD CLASS=TDStyle7>Medium Intensity and Eddy Viscosity Ratio</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 to R1 Internal Side 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>INTERFACE</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>SHROUD TIP GGI SIDE 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 to R1 Internal Side 2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>INTERFACE</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>SHROUD TIP GGI SIDE 2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 to R1 Periodic 1 Side 1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>INTERFACE</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>PER1</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 to R1 Periodic 1 Side 2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>INTERFACE</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>PER2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Turbulence</TD>
+    <TD CLASS=TDStyle7>Conservative Interface Flux</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 Outlet</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>OUTLET</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>OUTFLOW</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Flow Regime</TD>
+    <TD CLASS=TDStyle7>Subsonic</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>Average Static Pressure</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pressure Profile Blend</TD>
+    <TD CLASS=TDStyle7>  5.0000e-2</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative Pressure</TD>
+    <TD CLASS=TDStyle7>  1.0000e+0 [atm]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Pressure Averaging</TD>
+    <TD CLASS=TDStyle7>Average Over Whole Outlet</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 Blade</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>WALL</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>BLADE</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Adiabatic</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>No Slip Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Wall Roughness</TD>
+    <TD CLASS=TDStyle7>Smooth Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 Hub</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>WALL</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>HUB</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Adiabatic</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>No Slip Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Wall Roughness</TD>
+    <TD CLASS=TDStyle7>Smooth Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle1 colspan="2" >Boundary - R1 Shroud</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Type</TD>
+    <TD CLASS=TDStyle7>WALL</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Location</TD>
+    <TD CLASS=TDStyle7>SHROUD</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle6 colspan="2" >Settings</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Heat Transfer</TD>
+    <TD CLASS=TDStyle7>Adiabatic</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Mass And Momentum</TD>
+    <TD CLASS=TDStyle7>No Slip Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wall Velocity</TD>
+    <TD CLASS=TDStyle7>Counter Rotating Wall</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle5>Wall Roughness</TD>
+    <TD CLASS=TDStyle7>Smooth Wall</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<a id=CHART1></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 1.</b></TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart001.png' alt='Chart 1. CompressorRotorReport/Chart001.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART2></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 2.</b></TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart002.png' alt='Chart 2. CompressorRotorReport/Chart002.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART3></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 3.</b></TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart003.png' alt='Chart 3. CompressorRotorReport/Chart003.png'></TD>
+</TR>
+</TABLE>
+
+<a id=FIGURE1></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 1.</b></TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure001.png' alt='Figure 1 - CompressorRotorReport/Figure001.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE2></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 2.</b></TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure002.png' alt='Figure 2 - CompressorRotorReport/Figure002.png'></TD></TR>
+</TABLE>
+
+<a id=TABLE6></a><DIV CLASS=CAPTION><b>Table 6.</b>&nbsp;&nbsp;</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle2>Mass flow rate</TD>
+    <TD CLASS=TDStyle2>20.91</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Mass flow rate outlet</TD>
+    <TD CLASS=TDStyle2>20.91</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>PR</TD>
+    <TD CLASS=TDStyle2> 1.75</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>TR</TD>
+    <TD CLASS=TDStyle2> 1.21</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Efficiency</TD>
+    <TD CLASS=TDStyle2> 0.82</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<h1 style='page-break-before:always'><a id=SECTION4.></a>4.&nbsp;Tabulated Results</h1>
+<p>The first table below gives a summary of the performance results for the axial compressor rotor. The second table lists the mass or area averaged solution variables and derived quantities computed at the inlet, leading edge (LE Cut), trailing edge (TE Cut) and outlet locations. The flow angles Alpha and Beta are relative to the meridional plane; a positive angle implies that the tangential velocity is the same direction as the machine rotation.</p>
+<a id=TABLE7></a><DIV CLASS=CAPTION><b>Table 7.</b>&nbsp;&nbsp;Compressor Performance Results</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle2>Rotation Speed</TD>
+    <TD CLASS=TDStyle4>1800.0300</TD>
+    <TD CLASS=TDStyle2> [radian s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Mass Flow Rate</TD>
+    <TD CLASS=TDStyle4>20.9142</TD>
+    <TD CLASS=TDStyle2> [kg s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Inlet Volume Flow Rate</TD>
+    <TD CLASS=TDStyle4>17.0771</TD>
+    <TD CLASS=TDStyle2> [m^3 s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Input Power</TD>
+    <TD CLASS=TDStyle4>1285320.0000</TD>
+    <TD CLASS=TDStyle2> [W]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Reference Radius</TD>
+    <TD CLASS=TDStyle4> 0.2173</TD>
+    <TD CLASS=TDStyle2> [m]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Inlet Flow Coefficient</TD>
+    <TD CLASS=TDStyle4> 0.4565</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Exit Flow Coefficient</TD>
+    <TD CLASS=TDStyle4> 0.7082</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Work Input Coefficient</TD>
+    <TD CLASS=TDStyle4> 0.4017</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Reaction</TD>
+    <TD CLASS=TDStyle4> 0.7979</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Total Pressure Ratio</TD>
+    <TD CLASS=TDStyle4> 1.7536</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Total Temperature Ratio</TD>
+    <TD CLASS=TDStyle4> 1.2123</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Total Isentropic Efficiency %</TD>
+    <TD CLASS=TDStyle4>82.3159</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Total Polytropic Efficiency %</TD>
+    <TD CLASS=TDStyle4>83.5601</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<a id=TABLE8></a><DIV CLASS=CAPTION><b>Table 8.</b>&nbsp;&nbsp;Summary Data</DIV>
+<TABLE>
+  <TR>
+    <TD CLASS=TDStyle9>Quantity</TD>
+    <TD CLASS=TDStyle9>Inlet</TD>
+    <TD CLASS=TDStyle9>LE Cut</TD>
+    <TD CLASS=TDStyle9>TE Cut</TD>
+    <TD CLASS=TDStyle9>Outlet</TD>
+    <TD CLASS=TDStyle9>TE/LE</TD>
+    <TD CLASS=TDStyle9>TE-LE</TD>
+    <TD CLASS=TDStyle9>Units</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Density</TD>
+    <TD CLASS=TDStyle4> 1.0628</TD>
+    <TD CLASS=TDStyle4> 0.9842</TD>
+    <TD CLASS=TDStyle4> 1.3311</TD>
+    <TD CLASS=TDStyle4> 1.1834</TD>
+    <TD CLASS=TDStyle4> 1.3525</TD>
+    <TD CLASS=TDStyle4> 0.3469</TD>
+    <TD CLASS=TDStyle2> [kg m^-3]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Pstatic</TD>
+    <TD CLASS=TDStyle4>83077.9000</TD>
+    <TD CLASS=TDStyle4>75438.1000</TD>
+    <TD CLASS=TDStyle4>120314.0000</TD>
+    <TD CLASS=TDStyle4>101353.0000</TD>
+    <TD CLASS=TDStyle4> 1.5949</TD>
+    <TD CLASS=TDStyle4>44875.6000</TD>
+    <TD CLASS=TDStyle2> [Pa]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Ptotal</TD>
+    <TD CLASS=TDStyle4>101318.0000</TD>
+    <TD CLASS=TDStyle4>99965.5000</TD>
+    <TD CLASS=TDStyle4>182630.0000</TD>
+    <TD CLASS=TDStyle4>177669.0000</TD>
+    <TD CLASS=TDStyle4> 1.8269</TD>
+    <TD CLASS=TDStyle4>82665.0000</TD>
+    <TD CLASS=TDStyle2> [Pa]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Ptotal (rot)</TD>
+    <TD CLASS=TDStyle4>101304.0000</TD>
+    <TD CLASS=TDStyle4>99548.0000</TD>
+    <TD CLASS=TDStyle4>93752.9000</TD>
+    <TD CLASS=TDStyle4>90954.5000</TD>
+    <TD CLASS=TDStyle4> 0.9418</TD>
+    <TD CLASS=TDStyle4>-5795.0700</TD>
+    <TD CLASS=TDStyle2> [Pa]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Tstatic</TD>
+    <TD CLASS=TDStyle4>272.2060</TD>
+    <TD CLASS=TDStyle4>265.0340</TD>
+    <TD CLASS=TDStyle4>311.4450</TD>
+    <TD CLASS=TDStyle4>297.7990</TD>
+    <TD CLASS=TDStyle4> 1.1751</TD>
+    <TD CLASS=TDStyle4>46.4106</TD>
+    <TD CLASS=TDStyle2> [K]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Ttotal</TD>
+    <TD CLASS=TDStyle4>288.1540</TD>
+    <TD CLASS=TDStyle4>288.4740</TD>
+    <TD CLASS=TDStyle4>349.1730</TD>
+    <TD CLASS=TDStyle4>349.3420</TD>
+    <TD CLASS=TDStyle4> 1.2104</TD>
+    <TD CLASS=TDStyle4>60.6993</TD>
+    <TD CLASS=TDStyle2> [K]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Ttotal (rot)</TD>
+    <TD CLASS=TDStyle4>288.1420</TD>
+    <TD CLASS=TDStyle4>288.1440</TD>
+    <TD CLASS=TDStyle4>288.1890</TD>
+    <TD CLASS=TDStyle4>288.3900</TD>
+    <TD CLASS=TDStyle4> 1.0002</TD>
+    <TD CLASS=TDStyle4> 0.0450</TD>
+    <TD CLASS=TDStyle2> [K]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Hstatic</TD>
+    <TD CLASS=TDStyle4>-26057.8000</TD>
+    <TD CLASS=TDStyle4>-33261.7000</TD>
+    <TD CLASS=TDStyle4>13353.2000</TD>
+    <TD CLASS=TDStyle4>-352.2880</TD>
+    <TD CLASS=TDStyle4>-0.4015</TD>
+    <TD CLASS=TDStyle4>46614.8000</TD>
+    <TD CLASS=TDStyle2> [J kg^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Htotal</TD>
+    <TD CLASS=TDStyle4>-10039.9000</TD>
+    <TD CLASS=TDStyle4>-9718.5800</TD>
+    <TD CLASS=TDStyle4>51247.8000</TD>
+    <TD CLASS=TDStyle4>51417.0000</TD>
+    <TD CLASS=TDStyle4>-5.2732</TD>
+    <TD CLASS=TDStyle4>60966.4000</TD>
+    <TD CLASS=TDStyle2> [J kg^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Rothalpy</TD>
+    <TD CLASS=TDStyle4>-10052.3000</TD>
+    <TD CLASS=TDStyle4>-10050.4000</TD>
+    <TD CLASS=TDStyle4>-10005.2000</TD>
+    <TD CLASS=TDStyle4>-9802.7500</TD>
+    <TD CLASS=TDStyle4> 0.9955</TD>
+    <TD CLASS=TDStyle4>45.1992</TD>
+    <TD CLASS=TDStyle2> [J kg^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Entropy</TD>
+    <TD CLASS=TDStyle4>-34.2325</TD>
+    <TD CLASS=TDStyle4>-28.9899</TD>
+    <TD CLASS=TDStyle4>-9.8718</TD>
+    <TD CLASS=TDStyle4>-1.6089</TD>
+    <TD CLASS=TDStyle4> 0.3405</TD>
+    <TD CLASS=TDStyle4>19.1181</TD>
+    <TD CLASS=TDStyle2> [J kg^-1 K^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Mach (abs)</TD>
+    <TD CLASS=TDStyle4> 0.5406</TD>
+    <TD CLASS=TDStyle4> 0.6635</TD>
+    <TD CLASS=TDStyle4> 0.7759</TD>
+    <TD CLASS=TDStyle4> 0.9293</TD>
+    <TD CLASS=TDStyle4> 1.1693</TD>
+    <TD CLASS=TDStyle4> 0.1123</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Mach (rel)</TD>
+    <TD CLASS=TDStyle4> 1.3062</TD>
+    <TD CLASS=TDStyle4> 1.3713</TD>
+    <TD CLASS=TDStyle4> 0.9151</TD>
+    <TD CLASS=TDStyle4> 1.0567</TD>
+    <TD CLASS=TDStyle4> 0.6673</TD>
+    <TD CLASS=TDStyle4>-0.4562</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>U</TD>
+    <TD CLASS=TDStyle4>393.2390</TD>
+    <TD CLASS=TDStyle4>391.3520</TD>
+    <TD CLASS=TDStyle4>391.1440</TD>
+    <TD CLASS=TDStyle4>391.0040</TD>
+    <TD CLASS=TDStyle4> 0.9995</TD>
+    <TD CLASS=TDStyle4>-0.2076</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Cm</TD>
+    <TD CLASS=TDStyle4>178.5510</TD>
+    <TD CLASS=TDStyle4>213.8380</TD>
+    <TD CLASS=TDStyle4>204.6510</TD>
+    <TD CLASS=TDStyle4>277.3330</TD>
+    <TD CLASS=TDStyle4> 0.9570</TD>
+    <TD CLASS=TDStyle4>-9.1873</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Cu</TD>
+    <TD CLASS=TDStyle4> 0.0341</TD>
+    <TD CLASS=TDStyle4> 3.2861</TD>
+    <TD CLASS=TDStyle4>173.7060</TD>
+    <TD CLASS=TDStyle4>158.0940</TD>
+    <TD CLASS=TDStyle4>52.8616</TD>
+    <TD CLASS=TDStyle4>170.4200</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>C</TD>
+    <TD CLASS=TDStyle4>178.5580</TD>
+    <TD CLASS=TDStyle4>216.0690</TD>
+    <TD CLASS=TDStyle4>279.3300</TD>
+    <TD CLASS=TDStyle4>319.9940</TD>
+    <TD CLASS=TDStyle4> 1.2928</TD>
+    <TD CLASS=TDStyle4>63.2619</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Distortion Parameter</TD>
+    <TD CLASS=TDStyle4> 1.0058</TD>
+    <TD CLASS=TDStyle4> 1.0158</TD>
+    <TD CLASS=TDStyle4> 1.0515</TD>
+    <TD CLASS=TDStyle4> 1.0091</TD>
+    <TD CLASS=TDStyle4> 1.0351</TD>
+    <TD CLASS=TDStyle4> 0.0356</TD>
+    <TD CLASS=TDStyle2></TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Flow Angle: Alpha</TD>
+    <TD CLASS=TDStyle4> 0.0141</TD>
+    <TD CLASS=TDStyle4> 1.4587</TD>
+    <TD CLASS=TDStyle4>39.7740</TD>
+    <TD CLASS=TDStyle4>29.7107</TD>
+    <TD CLASS=TDStyle4>27.2658</TD>
+    <TD CLASS=TDStyle4>38.3153</TD>
+    <TD CLASS=TDStyle2> [degree]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Wu</TD>
+    <TD CLASS=TDStyle4>-393.2050</TD>
+    <TD CLASS=TDStyle4>-388.0670</TD>
+    <TD CLASS=TDStyle4>-217.4390</TD>
+    <TD CLASS=TDStyle4>-232.9100</TD>
+    <TD CLASS=TDStyle4> 0.5603</TD>
+    <TD CLASS=TDStyle4>170.6280</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>W</TD>
+    <TD CLASS=TDStyle4>432.3110</TD>
+    <TD CLASS=TDStyle4>443.7810</TD>
+    <TD CLASS=TDStyle4>303.6650</TD>
+    <TD CLASS=TDStyle4>363.8300</TD>
+    <TD CLASS=TDStyle4> 0.6843</TD>
+    <TD CLASS=TDStyle4>-140.1150</TD>
+    <TD CLASS=TDStyle2> [m s^-1]</TD>
+  </TR>
+  <TR>
+    <TD CLASS=TDStyle2>Flow Angle: Beta</TD>
+    <TD CLASS=TDStyle4>-65.3659</TD>
+    <TD CLASS=TDStyle4>-60.2589</TD>
+    <TD CLASS=TDStyle4>-41.0043</TD>
+    <TD CLASS=TDStyle4>-39.6999</TD>
+    <TD CLASS=TDStyle4> 0.6805</TD>
+    <TD CLASS=TDStyle4>19.2546</TD>
+    <TD CLASS=TDStyle2> [degree]</TD>
+  </TR>
+</TABLE>
+&nbsp;<br>
+
+<h1 style='page-break-before:always'><a id=SECTION5.></a>5.&nbsp;Blade Loading Charts</h1>
+<br>
+<a id=CHART4></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 4.</b>&nbsp;&nbsp;Blade Loading at 20% Span</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart004.png' alt='Chart 4. CompressorRotorReport/Chart004.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART5></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 5.</b>&nbsp;&nbsp;Blade Loading at 50% Span</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart005.png' alt='Chart 5. CompressorRotorReport/Chart005.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART6></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 6.</b>&nbsp;&nbsp;Blade Loading at 80% Span</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart006.png' alt='Chart 6. CompressorRotorReport/Chart006.png'></TD>
+</TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION6.></a>6.&nbsp;Streamwise Charts</h1>
+<br>
+<a id=CHART7></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 7.</b>&nbsp;&nbsp;Streamwise Plot of Pt and P</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart007.png' alt='Chart 7. CompressorRotorReport/Chart007.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART8></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 8.</b>&nbsp;&nbsp;Streamwise Plot of Tt and T</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart008.png' alt='Chart 8. CompressorRotorReport/Chart008.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART9></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 9.</b>&nbsp;&nbsp;Streamwise Plot of Absolute and Relative Mach Number</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart009.png' alt='Chart 9. CompressorRotorReport/Chart009.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART10></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 10.</b>&nbsp;&nbsp;Streamwise Plot of Static Entropy</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart010.png' alt='Chart 10. CompressorRotorReport/Chart010.png'></TD>
+</TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION7.></a>7.&nbsp;Spanwise Charts</h1>
+<br>
+<a id=CHART11></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 11.</b>&nbsp;&nbsp;Spanwise Plot of Alpha and Beta at LE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart011.png' alt='Chart 11. CompressorRotorReport/Chart011.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART12></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 12.</b>&nbsp;&nbsp;Spanwise Plot of Relative Mach Number at LE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart012.png' alt='Chart 12. CompressorRotorReport/Chart012.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART13></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 13.</b>&nbsp;&nbsp;Spanwise Plot of Alpha and Beta at TE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart013.png' alt='Chart 13. CompressorRotorReport/Chart013.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART14></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 14.</b>&nbsp;&nbsp;Spanwise Plot of Relative Mach Number at TE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart014.png' alt='Chart 14. CompressorRotorReport/Chart014.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART15></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 15.</b>&nbsp;&nbsp;Spanwise Plot of Absolute Mach Number at TE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart015.png' alt='Chart 15. CompressorRotorReport/Chart015.png'></TD>
+</TR>
+</TABLE>
+
+<a id=CHART16></a><TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Chart 16.</b>&nbsp;&nbsp;Spanwise Plot of Meridional Velocity at TE</TD></TR>
+<TR>
+<TD class='FigurePicture'><img src='CompressorRotorReport/Chart016.png' alt='Chart 16. CompressorRotorReport/Chart016.png'></TD>
+</TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION8.></a>8.&nbsp;Blade Geometry Plots</h1>
+<br>
+<a id=FIGURE3></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 3.</b>&nbsp;&nbsp;Isometric 3D View of the Blade, Hub and Shroud</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure003.png' alt='Figure 3 - CompressorRotorReport/Figure003.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE4></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 4.</b>&nbsp;&nbsp;Meridional View of the Blade, Hub and Shroud</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure004.png' alt='Figure 4 - CompressorRotorReport/Figure004.png'></TD></TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION9.></a>9.&nbsp;Blade Mesh Plot</h1>
+<br>
+<a id=FIGURE5></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 5.</b>&nbsp;&nbsp;Mesh Elements at 50% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure005.png' alt='Figure 5 - CompressorRotorReport/Figure005.png'></TD></TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION10.></a>10.&nbsp;Blade to Blade Plots</h1>
+<br>
+<a id=FIGURE6></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 6.</b>&nbsp;&nbsp;Contour of M rel at 20% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure006.png' alt='Figure 6 - CompressorRotorReport/Figure006.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE7></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 7.</b>&nbsp;&nbsp;Contour of M rel at 50% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure007.png' alt='Figure 7 - CompressorRotorReport/Figure007.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE8></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 8.</b>&nbsp;&nbsp;Contour of M rel at 80% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure008.png' alt='Figure 8 - CompressorRotorReport/Figure008.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE9></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 9.</b>&nbsp;&nbsp;Velocity Vectors at 20% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure009.png' alt='Figure 9 - CompressorRotorReport/Figure009.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE10></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 10.</b>&nbsp;&nbsp;Velocity Vectors at 50% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure010.png' alt='Figure 10 - CompressorRotorReport/Figure010.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE11></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 11.</b>&nbsp;&nbsp;Velocity Vectors at 80% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure011.png' alt='Figure 11 - CompressorRotorReport/Figure011.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE12></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 12.</b>&nbsp;&nbsp;Contour of s at 20% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure012.png' alt='Figure 12 - CompressorRotorReport/Figure012.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE13></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 13.</b>&nbsp;&nbsp;Contour of s at 50% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure013.png' alt='Figure 13 - CompressorRotorReport/Figure013.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE14></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 14.</b>&nbsp;&nbsp;Contour of s at 80% Span</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure014.png' alt='Figure 14 - CompressorRotorReport/Figure014.png'></TD></TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION11.></a>11.&nbsp;Meridional Plots</h1>
+<br>
+<a id=FIGURE15></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 15.</b>&nbsp;&nbsp;Contour of Mass Averaged P on Meridional Surface</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure015.png' alt='Figure 15 - CompressorRotorReport/Figure015.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE16></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 16.</b>&nbsp;&nbsp;Contour of Mass Averaged M rel on Meridional Surface</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure016.png' alt='Figure 16 - CompressorRotorReport/Figure016.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE17></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 17.</b>&nbsp;&nbsp;Vector of Area Averaged Cm on Meridional Surface</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure017.png' alt='Figure 17 - CompressorRotorReport/Figure017.png'></TD></TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION12.></a>12.&nbsp;Circumferential Plots</h1>
+<br>
+<a id=FIGURE18></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 18.</b>&nbsp;&nbsp;Contour of P at Blade LE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure018.png' alt='Figure 18 - CompressorRotorReport/Figure018.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE19></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 19.</b>&nbsp;&nbsp;Contour of M rel at Blade LE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure019.png' alt='Figure 19 - CompressorRotorReport/Figure019.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE20></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 20.</b>&nbsp;&nbsp;Contour of s at Blade LE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure020.png' alt='Figure 20 - CompressorRotorReport/Figure020.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE21></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 21.</b>&nbsp;&nbsp;Contour of P at Blade TE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure021.png' alt='Figure 21 - CompressorRotorReport/Figure021.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE22></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 22.</b>&nbsp;&nbsp;Contour of M rel at Blade TE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure022.png' alt='Figure 22 - CompressorRotorReport/Figure022.png'></TD></TR>
+</TABLE>
+
+<a id=FIGURE23></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 23.</b>&nbsp;&nbsp;Contour of s at Blade TE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure023.png' alt='Figure 23 - CompressorRotorReport/Figure023.png'></TD></TR>
+</TABLE>
+
+<h1 style='page-break-before:always'><a id=SECTION13.></a>13.&nbsp;Streamline Plot</h1>
+<br>
+<a id=FIGURE24></a>
+<TABLE class='FigureTable'>
+<TR><TD class='FigureTitle'><b>Figure 24.</b>&nbsp;&nbsp;Velocity Streamlines at Blade TE</TD></TR>
+<TR><TD class='FigurePicture'><img src='CompressorRotorReport/Figure024.png' alt='Figure 24 - CompressorRotorReport/Figure024.png'></TD></TR>
+</TABLE>
+
+
+</body>
+</html>
